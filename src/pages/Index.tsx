@@ -1,19 +1,16 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import ContactForm from '@/components/ContactForm';
-import { Blueprint, Globe, Scale, ArrowDown } from 'lucide-react';
+import { FileText, Globe, Scale, ArrowDown } from 'lucide-react';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
-    // Add loaded class after component mounts for animations
     setIsLoaded(true);
     
-    // Initialize scroll reveal
     const handleScroll = () => {
       const reveals = document.querySelectorAll('.reveal-on-scroll');
       
@@ -28,7 +25,6 @@ const Index = () => {
     };
     
     window.addEventListener('scroll', handleScroll);
-    // Trigger once on load
     handleScroll();
     
     return () => {
@@ -148,7 +144,7 @@ const Index = () => {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           <div className="bg-serendipity-cream p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
             <div className="bg-serendipity-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Blueprint size={28} className="text-serendipity-teal" />
+              <FileText size={28} className="text-serendipity-teal" />
             </div>
             <h3 className="text-xl font-bold mb-4 text-serendipity-dark">Practical Frameworks</h3>
             <p>
