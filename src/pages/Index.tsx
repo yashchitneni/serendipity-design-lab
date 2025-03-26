@@ -242,7 +242,7 @@ const Index = () => {
         </div>
       </Section>
       
-      <!-- Updated Key Takeaways Section -->
+      {/* Key Takeaways Section */}
       <Section id="takeaways" className="bg-serendipity-cream">
         <div className="text-center mb-16 reveal-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-serendipity-dark">What You'll Discover</h2>
