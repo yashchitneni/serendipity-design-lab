@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
@@ -241,39 +242,40 @@ const Index = () => {
         </div>
       </Section>
       
-      <Section id="takeaways" className="bg-white">
+      <!-- Updated Key Takeaways Section -->
+      <Section id="takeaways" className="bg-serendipity-cream">
         <div className="text-center mb-16 reveal-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What You'll Discover</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-serendipity-dark">What You'll Discover</h2>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          <div className="bg-serendipity-cream p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
             <div className="bg-serendipity-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <FileText size={28} className="text-serendipity-teal" />
             </div>
-            <h3 className="text-xl font-bold mb-4 text-serendipity-dark">Practical Frameworks</h3>
-            <p>
-              Serendipity Blueprints to map spaces for chance, Controlled Chaos Sprints to disrupt routines, and more actionable methods.
+            <h3 className="text-xl font-bold mb-4 text-serendipity-dark font-montserrat">Practical Frameworks</h3>
+            <p className="font-lora text-serendipity-dark">
+              Serendipity Blueprints to map spaces for chance encounters, Controlled Chaos Sprints to disrupt routines, and more actionable methods.
             </p>
           </div>
           
-          <div className="bg-serendipity-cream p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
             <div className="bg-serendipity-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <Globe size={28} className="text-serendipity-teal" />
             </div>
-            <h3 className="text-xl font-bold mb-4 text-serendipity-dark">Cross-Cultural Insights</h3>
-            <p>
+            <h3 className="text-xl font-bold mb-4 text-serendipity-dark font-montserrat">Cross-Cultural Insights</h3>
+            <p className="font-lora text-serendipity-dark">
               Explore diverse perspectives on serendipity, from Japanese Wabi-Sabi to African Ubuntu, and their unique approaches to discovery.
             </p>
           </div>
           
-          <div className="bg-serendipity-cream p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center reveal-on-scroll">
             <div className="bg-serendipity-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <Scale size={28} className="text-serendipity-teal" />
             </div>
-            <h3 className="text-xl font-bold mb-4 text-serendipity-dark">Ethical Design</h3>
-            <p>
-              Guidelines for creating equitable serendipity environments that benefit everyone, not just those with existing privilege.
+            <h3 className="text-xl font-bold mb-4 text-serendipity-dark font-montserrat">Ethical Serendipity</h3>
+            <p className="font-lora text-serendipity-dark">
+              Actionable guidelines to design serendipity ethically, ensuring environments empower everyone without crossing into manipulation.
             </p>
           </div>
         </div>
@@ -283,19 +285,19 @@ const Index = () => {
         </div>
       </Section>
       
-      <Section id="author" className="bg-serendipity-cream">
+      <Section id="author" className="bg-white">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10 reveal-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why I Wrote This</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-serendipity-dark">Why I Wrote This</h2>
           </div>
           
-          <div className="bg-white p-8 rounded-lg shadow-md reveal-on-scroll">
-            <p className="text-lg mb-6">
+          <div className="bg-serendipity-cream p-8 rounded-lg shadow-md reveal-on-scroll">
+            <p className="text-lg mb-6 font-lora text-serendipity-dark">
               I'm a creator and builder, born on St. Patrick's Day, with a natural affinity for luck. I've spent years designing experiences and communities, learning how to craft serendipity along the way. This book weaves in stories from conversations I'm having with others, making it a collaborative journey.
             </p>
             <div className="flex justify-center">
               <div className="w-24 h-24 bg-serendipity-teal/20 rounded-full flex items-center justify-center">
-                <span className="text-serendipity-teal text-xl font-semibold">AP</span>
+                <span className="text-serendipity-teal text-xl font-semibold font-montserrat">AP</span>
               </div>
             </div>
           </div>
@@ -306,15 +308,15 @@ const Index = () => {
         </div>
       </Section>
       
-      <Section id="vision" className="bg-white">
+      <Section id="vision" className="bg-serendipity-cream">
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-10 reveal-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">A Serendipity Movement</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat text-serendipity-dark">A Serendipity Movement</h2>
           </div>
           
           <div className="reveal-on-scroll">
-            <p className="text-lg mb-12">
-              This book is the start of a movement—imagine workshops, podcasts, and serendipity-rich communities. I'm collecting stories from people I meet to weave into the book, and I'd love your thoughts on the ethics of designing serendipity!
+            <p className="text-lg mb-12 font-lora text-serendipity-dark">
+              This book is the start of a movement—imagine games, communities. I'm collecting stories from people I meet to weave into the book.
             </p>
           </div>
           
@@ -324,11 +326,11 @@ const Index = () => {
         </div>
       </Section>
       
-      <Section id="contact" className="bg-serendipity-cream">
+      <Section id="contact" className="bg-white">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-12 reveal-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the Conversation</h2>
-            <p className="text-lg">Your insights could help shape this book. Share your thoughts on serendipity!</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-serendipity-dark">Join the Conversation</h2>
+            <p className="text-lg font-lora text-serendipity-dark">Your insights could help shape this book. Share your thoughts on serendipity!</p>
           </div>
           
           <div className="reveal-on-scroll">
