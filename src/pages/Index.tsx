@@ -42,7 +42,6 @@ const Index = () => {
   
   return (
     <div className={`min-h-screen transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Updated Navbar */}
       <header 
         className="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-3 bg-white/90 backdrop-blur-md shadow-sm"
       >
@@ -57,7 +56,6 @@ const Index = () => {
         </div>
       </header>
       
-      {/* Hero Section */}
       <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-serendipity-cream py-20 md:py-0">
         <div className="absolute inset-0 w-full h-full">
           <img 
@@ -75,7 +73,6 @@ const Index = () => {
               Discover how to craft serendipity with my book.
             </p>
             <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
-              {/* Updated Button */}
               <InteractiveHoverButton 
                 href="#about"
                 text="Explore the Book"
@@ -93,7 +90,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* About the Book Section - Replaced with ContainerScroll */}
       <ContainerScroll
         titleComponent={
           <div className="mb-10">
@@ -129,7 +125,6 @@ const Index = () => {
         </div>
       </ContainerScroll>
       
-      {/* Problem & Solution Section */}
       <Section id="problem-solution" className="bg-serendipity-cream">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 reveal-on-scroll">The Problem & Solution</h2>
         
@@ -154,52 +149,86 @@ const Index = () => {
         </div>
       </Section>
       
-      {/* Book Structure Section - New */}
       <Section id="book-structure" className="bg-white">
         <div className="text-center mb-16 reveal-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-serendipity-dark">
             Inside Crafting Serendipity
           </h2>
-          <div className="space-y-8">
-            <Accordion type="single" collapsible>
-              <AccordionItem value="rethinking-serendipity">
-                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+          <div className="max-w-3xl mx-auto mt-10">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="rethinking-serendipity" className="border-serendipity-teal/20">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold text-serendipity-dark">
                   Rethinking Serendipity
                 </AccordionTrigger>
-                <AccordionContent className="font-lora space-y-4">
-                  <p>Chapter 1: Beyond Luck—Serendipity as a Creative Discipline—How serendipity can be a skill, with stories from history and my own life.</p>
-                  <p>Chapter 2: The Myth of Randomness—Cultural and Historical Perspectives—How cultures like the Japanese with Wabi-Sabi have embraced the unexpected.</p>
+                <AccordionContent className="text-base px-6">
+                  <div className="space-y-4 font-lora text-serendipity-dark/90">
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 1: Beyond Luck—Serendipity as a Creative Discipline</h4>
+                      <p className="mt-1">How serendipity can be a skill, with stories from history and my own life.</p>
+                    </div>
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 2: The Myth of Randomness—Cultural and Historical Perspectives</h4>
+                      <p className="mt-1">How cultures like the Japanese with Wabi-Sabi have embraced the unexpected.</p>
+                    </div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="designing-for-chance">
-                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+              <AccordionItem value="designing-for-chance" className="border-serendipity-teal/20">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold text-serendipity-dark">
                   Designing for Chance
                 </AccordionTrigger>
-                <AccordionContent className="font-lora space-y-4">
-                  <p>Chapter 3: Serendipity Engineering—Frameworks for Intentional Emergence—Tools like Serendipity Blueprints to design spaces for chance encounters.</p>
-                  <p>Chapter 4: Technology as a Serendipity Amplifier—How AI and tech can spark serendipity, with examples from creators.</p>
-                  <p>Chapter 5: Ethical Boundaries—When Does "Crafting" Become Manipulation?—Guidelines for fair and empowering serendipity.</p>
+                <AccordionContent className="text-base px-6">
+                  <div className="space-y-4 font-lora text-serendipity-dark/90">
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 3: Serendipity Engineering—Frameworks for Intentional Emergence</h4>
+                      <p className="mt-1">Tools like Serendipity Blueprints to design spaces for chance encounters.</p>
+                    </div>
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 4: Technology as a Serendipity Amplifier</h4>
+                      <p className="mt-1">How AI and tech can spark serendipity, with examples from creators.</p>
+                    </div>
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 5: Ethical Boundaries—When Does "Crafting" Become Manipulation?</h4>
+                      <p className="mt-1">Guidelines for fair and empowering serendipity.</p>
+                    </div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="collective-serendipity">
-                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+              <AccordionItem value="collective-serendipity" className="border-serendipity-teal/20">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold text-serendipity-dark">
                   Collective Serendipity
                 </AccordionTrigger>
-                <AccordionContent className="font-lora space-y-4">
-                  <p>Chapter 6: Communities as Serendipity Networks—How communities create serendipity through shared spaces and rituals.</p>
-                  <p>Chapter 7: Policy for Serendipity—Urban Design, Education, and Workplace Innovation—How cities and workplaces can be designed for chance encounters.</p>
+                <AccordionContent className="text-base px-6">
+                  <div className="space-y-4 font-lora text-serendipity-dark/90">
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 6: Communities as Serendipity Networks</h4>
+                      <p className="mt-1">How communities create serendipity through shared spaces and rituals.</p>
+                    </div>
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 7: Policy for Serendipity—Urban Design, Education, and Workplace Innovation</h4>
+                      <p className="mt-1">How cities and workplaces can be designed for chance encounters.</p>
+                    </div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="sustaining-serendipity">
-                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+              <AccordionItem value="sustaining-serendipity" className="border-serendipity-teal/20">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold text-serendipity-dark">
                   Sustaining Serendipity
                 </AccordionTrigger>
-                <AccordionContent className="font-lora space-y-4">
-                  <p>Chapter 8: The Long Game—Cultivating Patience in a World Obsessed with Instant Results—How to stay open to serendipity over time.</p>
-                  <p>Chapter 9: Failure as Fertilizer—Reframing Setbacks into Serendipity Triggers—How setbacks can lead to unexpected opportunities.</p>
+                <AccordionContent className="text-base px-6">
+                  <div className="space-y-4 font-lora text-serendipity-dark/90">
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 8: The Long Game—Cultivating Patience in a World Obsessed with Instant Results</h4>
+                      <p className="mt-1">How to stay open to serendipity over time.</p>
+                    </div>
+                    <div className="pl-4 border-l-2 border-serendipity-teal/30">
+                      <h4 className="font-montserrat font-medium">Chapter 9: Failure as Fertilizer—Reframing Setbacks into Serendipity Triggers</h4>
+                      <p className="mt-1">How setbacks can lead to unexpected opportunities.</p>
+                    </div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -212,7 +241,6 @@ const Index = () => {
         </div>
       </Section>
       
-      {/* Key Takeaways Section */}
       <Section id="takeaways" className="bg-white">
         <div className="text-center mb-16 reveal-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What You'll Discover</h2>
@@ -255,7 +283,6 @@ const Index = () => {
         </div>
       </Section>
       
-      {/* About Me Section */}
       <Section id="author" className="bg-serendipity-cream">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10 reveal-on-scroll">
@@ -279,7 +306,6 @@ const Index = () => {
         </div>
       </Section>
       
-      {/* Vision Section */}
       <Section id="vision" className="bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-10 reveal-on-scroll">
@@ -298,7 +324,6 @@ const Index = () => {
         </div>
       </Section>
       
-      {/* Contact Section */}
       <Section id="contact" className="bg-serendipity-cream">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-12 reveal-on-scroll">
@@ -312,7 +337,6 @@ const Index = () => {
         </div>
       </Section>
       
-      {/* Footer */}
       <footer className="bg-serendipity-teal text-white py-8">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center">
