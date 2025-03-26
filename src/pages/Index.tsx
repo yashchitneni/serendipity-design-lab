@@ -1,9 +1,12 @@
+
 import React, { useEffect, useState } from 'react';
-import Navbar from '@/components/Navbar';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import ContactForm from '@/components/ContactForm';
 import { FileText, Globe, Scale, ArrowDown } from 'lucide-react';
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
+import NavHeader from '@/components/ui/nav-header';
+import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,7 +37,20 @@ const Index = () => {
   
   return (
     <div className={`min-h-screen transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-      <Navbar />
+      {/* Updated Navbar */}
+      <header 
+        className="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-3 bg-white/90 backdrop-blur-md shadow-sm"
+      >
+        <div className="container-custom flex items-center justify-between">
+          <a href="#" className="text-serendipity-teal font-montserrat font-semibold text-xl">
+            Serendipity
+          </a>
+          
+          <nav className="hidden md:flex items-center gap-8">
+            <NavHeader />
+          </nav>
+        </div>
+      </header>
       
       {/* Hero Section */}
       <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-serendipity-cream py-20 md:py-0">
@@ -54,9 +70,12 @@ const Index = () => {
               Discover how to craft serendipity with my book.
             </p>
             <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
-              <Button href="#about" variant="primary" size="lg">
-                Explore the Book
-              </Button>
+              {/* Updated Button */}
+              <InteractiveHoverButton 
+                href="#about"
+                text="Explore the Book"
+                className="mx-auto bg-serendipity-cream border-serendipity-teal text-serendipity-teal"
+              />
             </div>
             
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-in" style={{ animationDelay: '800ms' }}>
@@ -69,46 +88,41 @@ const Index = () => {
         </div>
       </section>
       
-      {/* About the Book Section */}
-      <Section id="about" className="bg-white">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <div className="reveal-on-scroll">
-              <img 
-                src="/lovable-uploads/b4622520-7b5b-4e32-9f56-166aa1cb1c15.png" 
-                alt="Crafting Serendipity Book Cover" 
-                className="max-w-full h-auto shadow-xl rounded-lg mx-auto"
-                style={{ maxHeight: '500px' }}
+      {/* About the Book Section - Replaced with ContainerScroll */}
+      <ContainerScroll
+        titleComponent={
+          <div className="mb-10">
+            <h2 className="text-3xl md:text-5xl font-bold text-serendipity-teal mb-2">Crafting Serendipity</h2>
+            <h3 className="text-xl md:text-2xl text-serendipity-dark/70 mb-6">Designing a Life of Intentional Luck and Meaningful Surprises</h3>
+          </div>
+        }
+      >
+        <div className="flex flex-col md:flex-row h-full p-4 md:p-8">
+          <div className="md:w-1/2 p-4 flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/b4622520-7b5b-4e32-9f56-166aa1cb1c15.png" 
+              alt="Crafting Serendipity Book Cover" 
+              className="max-w-full h-auto shadow-xl rounded-lg"
+              style={{ maxHeight: '400px' }}
+            />
+          </div>
+          <div className="md:w-1/2 p-4 flex flex-col justify-center">
+            <div className="space-y-6">
+              <p className="text-lg font-medium mb-4">
+                My book helps creators, builders, and dreamers turn serendipity into a craft, using practical frameworks to design environments where meaningful coincidences spark innovation and connection.
+              </p>
+              <p className="mb-8">
+                I'm a creator who's learned to build serendipity into my life—and now I'm sharing how you can too. From frameworks to cross-cultural insights, this book shows you how to make the unexpected a repeatable part of your world.
+              </p>
+              <InteractiveHoverButton 
+                href="#takeaways" 
+                text="Learn the Method"
+                className="bg-serendipity-cream border-serendipity-teal text-serendipity-teal"
               />
             </div>
           </div>
-          
-          <div className="order-1 md:order-2">
-            <div className="space-y-6">
-              <div className="reveal-on-scroll">
-                <h2 className="text-3xl md:text-4xl font-bold text-serendipity-teal mb-2">Crafting Serendipity</h2>
-                <h3 className="text-xl md:text-2xl text-serendipity-dark/70 mb-6">Designing a Life of Intentional Luck and Meaningful Surprises</h3>
-              </div>
-              
-              <div className="reveal-on-scroll">
-                <p className="text-lg font-medium mb-4">
-                  My book helps creators, builders, and dreamers turn serendipity into a craft, using practical frameworks to design environments where meaningful coincidences spark innovation and connection.
-                </p>
-              </div>
-              
-              <div className="reveal-on-scroll">
-                <p className="mb-8">
-                  I'm a creator who's learned to build serendipity into my life—and now I'm sharing how you can too. From frameworks to cross-cultural insights, this book shows you how to make the unexpected a repeatable part of your world.
-                </p>
-              </div>
-              
-              <div className="reveal-on-scroll">
-                <Button href="#takeaways" variant="secondary">Learn the Method</Button>
-              </div>
-            </div>
-          </div>
         </div>
-      </Section>
+      </ContainerScroll>
       
       {/* Problem & Solution Section */}
       <Section id="problem-solution" className="bg-serendipity-cream">
