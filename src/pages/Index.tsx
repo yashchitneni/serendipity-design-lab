@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
@@ -7,6 +6,12 @@ import { FileText, Globe, Scale, ArrowDown } from 'lucide-react';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 import NavHeader from '@/components/ui/nav-header';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -146,6 +151,64 @@ const Index = () => {
         
         <div className="text-center mt-12 reveal-on-scroll">
           <Button href="#takeaways" variant="primary">See How It Works</Button>
+        </div>
+      </Section>
+      
+      {/* Book Structure Section - New */}
+      <Section id="book-structure" className="bg-white">
+        <div className="text-center mb-16 reveal-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat text-serendipity-dark">
+            Inside Crafting Serendipity
+          </h2>
+          <div className="space-y-8">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="rethinking-serendipity">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+                  Rethinking Serendipity
+                </AccordionTrigger>
+                <AccordionContent className="font-lora space-y-4">
+                  <p>Chapter 1: Beyond Luck—Serendipity as a Creative Discipline—How serendipity can be a skill, with stories from history and my own life.</p>
+                  <p>Chapter 2: The Myth of Randomness—Cultural and Historical Perspectives—How cultures like the Japanese with Wabi-Sabi have embraced the unexpected.</p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="designing-for-chance">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+                  Designing for Chance
+                </AccordionTrigger>
+                <AccordionContent className="font-lora space-y-4">
+                  <p>Chapter 3: Serendipity Engineering—Frameworks for Intentional Emergence—Tools like Serendipity Blueprints to design spaces for chance encounters.</p>
+                  <p>Chapter 4: Technology as a Serendipity Amplifier—How AI and tech can spark serendipity, with examples from creators.</p>
+                  <p>Chapter 5: Ethical Boundaries—When Does "Crafting" Become Manipulation?—Guidelines for fair and empowering serendipity.</p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="collective-serendipity">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+                  Collective Serendipity
+                </AccordionTrigger>
+                <AccordionContent className="font-lora space-y-4">
+                  <p>Chapter 6: Communities as Serendipity Networks—How communities create serendipity through shared spaces and rituals.</p>
+                  <p>Chapter 7: Policy for Serendipity—Urban Design, Education, and Workplace Innovation—How cities and workplaces can be designed for chance encounters.</p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="sustaining-serendipity">
+                <AccordionTrigger className="text-left font-montserrat text-lg font-semibold">
+                  Sustaining Serendipity
+                </AccordionTrigger>
+                <AccordionContent className="font-lora space-y-4">
+                  <p>Chapter 8: The Long Game—Cultivating Patience in a World Obsessed with Instant Results—How to stay open to serendipity over time.</p>
+                  <p>Chapter 9: Failure as Fertilizer—Reframing Setbacks into Serendipity Triggers—How setbacks can lead to unexpected opportunities.</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className="text-center mt-12 reveal-on-scroll">
+            <Button href="#takeaways" variant="outline">
+              Discover the Takeaways
+            </Button>
+          </div>
         </div>
       </Section>
       
