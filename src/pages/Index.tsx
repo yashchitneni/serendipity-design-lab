@@ -127,26 +127,26 @@ const Index = () => {
       </ContainerScroll>
       
       <Section id="problem-solution" className="bg-serendipity-cream">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 reveal-on-scroll">The Problem & Solution</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 reveal-on-scroll font-montserrat text-serendipity-dark">The Problem & Solution</h2>
         
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           <div className="bg-white p-8 rounded-lg shadow-md reveal-on-scroll animate-fade-in-right">
-            <h3 className="text-2xl font-bold text-serendipity-coral mb-6">Stuck in a Creativity Drought?</h3>
-            <p className="text-lg">
-              Rigid routines and algorithmic bubbles are killing our exposure to new ideas and chance encounters, leaving us in a predictable rut.
+            <h3 className="text-2xl font-bold text-serendipity-coral mb-6 font-montserrat">Missing the Magic of Serendipity?</h3>
+            <p className="text-lg font-lora text-serendipity-dark">
+              In today's hyper-controlled, algorithmic world, rigid routines and digital filters keep us in a predictable bubble, leaving us feeling disconnected, uninspired, and longing for the joy of chance encounters.
             </p>
           </div>
           
           <div className="bg-white p-8 rounded-lg shadow-md reveal-on-scroll animate-fade-in-left">
-            <h3 className="text-2xl font-bold text-serendipity-teal mb-6">Become a Serendipity Architect</h3>
-            <p className="text-lg">
+            <h3 className="text-2xl font-bold text-serendipity-teal mb-6 font-montserrat">Become a Serendipity Architect</h3>
+            <p className="text-lg font-lora text-serendipity-dark">
               My book teaches you to design environments where meaningful surprises thrive—using frameworks like "Serendipity Blueprints" to map spaces for chance connections and "Controlled Chaos Sprints" to break routine patterns.
             </p>
           </div>
         </div>
         
         <div className="text-center mt-12 reveal-on-scroll">
-          <Button href="#takeaways" variant="primary">See How It Works</Button>
+          <Button href="#book-structure" variant="primary">See How It Works</Button>
         </div>
       </Section>
       
